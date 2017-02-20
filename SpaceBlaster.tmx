@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-down" width="20" height="10" tilewidth="48" tileheight="48" nextobjectid="29">
+ <tileset firstgid="1" name="Spaceship" tilewidth="48" tileheight="48" tilecount="1" columns="1">
+  <image source="../../RPG Maker MV/Resources/Piskel/Spaceship/Spaceship48.png" width="48" height="48"/>
+ </tileset>
+ <tileset firstgid="2" name="Blank48" tilewidth="48" tileheight="48" tilecount="1" columns="1">
+  <image source="../../RPG Maker MV/Resources/Piskel/Spaceship/Blank48.png" width="48" height="48"/>
+ </tileset>
+ <tileset firstgid="3" name="background" tilewidth="48" tileheight="48" tilecount="1980" columns="40">
+  <image source="../../../Pictures/Saved Pictures/SpaceBackground1920x1080.png" width="1920" height="1080"/>
+ </tileset>
+ <tileset firstgid="1983" name="enemy_Purple" tilewidth="48" tileheight="48" tilecount="4" columns="2">
+  <image source="../../RPG Maker MV/Resources/Piskel/Dark Glow Ship/Dark Glow Ship.png" width="96" height="96"/>
+ </tileset>
+ <tileset firstgid="1987" name="player_Green" tilewidth="48" tileheight="48" tilecount="6" columns="2">
+  <image source="../../RPG Maker MV/Resources/Piskel/Green Space Ship/Green Space Ship.png" width="96" height="144"/>
+ </tileset>
+ <tileset firstgid="1993" name="bomb" tilewidth="32" tileheight="32" tilecount="4" columns="2">
+  <image source="../../RPG Maker MV/Resources/Piskel/Bomb/Bomb.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="1997" name="powercell" tilewidth="32" tileheight="32" tilecount="4" columns="2">
+  <image source="../../RPG Maker MV/Resources/Piskel/Power Cell/Power Cell.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="2001" name="meteor" tilewidth="32" tileheight="32" tilecount="4" columns="2">
+  <image source="../../RPG Maker MV/Resources/Piskel/Asteroid/New Piskel.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="2005" name="bullet" tilewidth="48" tileheight="48" tilecount="2" columns="1">
+  <image source="../../RPG Maker MV/Resources/Piskel/Bullet/Bullet.png" width="48" height="96"/>
+ </tileset>
+ <tileset firstgid="2007" name="explosion" tilewidth="32" tileheight="32" tilecount="9" columns="3">
+  <image source="../../RPG Maker MV/Resources/Piskel/Explosion/Explosion.png" width="96" height="96"/>
+ </tileset>
+ <layer name="Player Layer" width="20" height="10">
+  <properties>
+   <property name="Lives" type="int" value="1"/>
+  </properties>
+  <data encoding="base64">
+   9wAAAPgAAAD5AAAA+gAAAPsAAAD8AAAA/QAAAP4AAAD/AAAAAAEAAAEBAAACAQAAAwEAAAQBAAAFAQAABgEAAAcBAAAIAQAACQEAAAoBAAAfAQAAIAEAACEBAAAiAQAAIwEAACQBAAAlAQAAJgEAACcBAAAoAQAAKQEAACoBAAArAQAALAEAAC0BAAAuAQAALwEAADABAAAxAQAAMgEAAEcBAABIAQAASQEAAEoBAABLAQAATAEAAE0BAABOAQAATwEAAFABAABRAQAAUgEAAFMBAABUAQAAVQEAAFYBAABXAQAAWAEAAFkBAABaAQAAbwEAAHABAABxAQAAcgEAAHMBAAB0AQAAdQEAAHYBAAB3AQAAeAEAAHkBAAB6AQAAewEAAHwBAAB9AQAAfgEAAH8BAACAAQAAgQEAAIIBAACXAQAAmAEAAJkBAACaAQAAmwEAAJwBAACdAQAAngEAAJ8BAACgAQAAoQEAAKIBAACjAQAApAEAAKUBAACmAQAApwEAAKgBAACpAQAAqgEAAL8BAADAAQAAwQEAAMIBAADDAQAAxAEAAMUBAADGAQAAxwEAAMgBAADJAQAAygEAAMsBAADMAQAAzQEAAM4BAADPAQAA0AEAANEBAADSAQAA5wEAAOgBAADpAQAA6gEAAOsBAADsAQAA7QEAAO4BAADvAQAA8AEAAPEBAADyAQAA8wEAAPQBAAD1AQAA9gEAAPcBAAD4AQAA+QEAAPoBAAAPAgAAEAIAABECAAASAgAAEwIAABQCAAAVAgAAFgIAABcCAAAYAgAAGQIAABoCAAAbAgAAHAIAAB0CAAAeAgAAHwIAACACAAAhAgAAIgIAADcCAAA4AgAAOQIAADoCAAA7AgAAPAIAAD0CAAA+AgAAPwIAAEACAABBAgAAQgIAAEMCAABEAgAARQIAAEYCAABHAgAASAIAAEkCAABKAgAAXwIAAGACAABhAgAAYgIAAGMCAABkAgAAZQIAAGYCAABnAgAAaAIAAGkCAABqAgAAawIAAGwCAABtAgAAbgIAAG8CAABwAgAAcQIAAHICAAA=
+  </data>
+ </layer>
+ <objectgroup name="Powerups">
+  <properties>
+   <property name="Animated" type="bool" value="true"/>
+  </properties>
+  <object id="21" name="Bomb" type="powerup" gid="1993" x="8" y="470" width="19.5" height="17">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Bomb/Bomb.json"/>
+   </properties>
+  </object>
+  <object id="23" name="Power Cell" type="powerup" gid="1997" x="45" y="474.67" width="25" height="25">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Power Cell/Power Cell.json"/>
+    <property name="lives" type="int" value="3"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Enemies">
+  <properties>
+   <property name="Animated" type="bool" value="true"/>
+  </properties>
+  <object id="10" name="T1" type="Enemy" gid="1983" x="960" y="48" width="48" height="48" rotation="-90">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Dark Glow Ship/Dark Glow Ship.json"/>
+    <property name="Enemy" type="bool" value="true"/>
+    <property name="addEnemy" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="12" name="T2" type="Enemy" gid="1983" x="960" y="96" width="48" height="48" rotation="-90">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Dark Glow Ship/Dark Glow Ship.json"/>
+    <property name="Enemy" type="bool" value="true"/>
+    <property name="addEnemy" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="13" name="T3" type="Enemy" gid="1983" x="960" y="144" width="48" height="48" rotation="-90">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Dark Glow Ship/Dark Glow Ship.json"/>
+    <property name="Enemy" type="bool" value="true"/>
+    <property name="addEnemy" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="14" name="T4" type="Enemy" gid="1983" x="960" y="192" width="48" height="48" rotation="-90">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Dark Glow Ship/Dark Glow Ship.json"/>
+    <property name="Enemy" type="bool" value="true"/>
+    <property name="addEnemy" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="15" name="T5" type="Enemy" gid="1983" x="960" y="240" width="48" height="48" rotation="-90">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Dark Glow Ship/Dark Glow Ship.json"/>
+    <property name="Enemy" type="bool" value="true"/>
+    <property name="addEnemy" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="16" name="T6" type="Enemy" gid="1983" x="960" y="288" width="48" height="48" rotation="-90">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Dark Glow Ship/Dark Glow Ship.json"/>
+    <property name="Enemy" type="bool" value="true"/>
+    <property name="addEnemy" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="17" name="T7" type="Enemy" gid="1983" x="960" y="336" width="48" height="48" rotation="-90">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Dark Glow Ship/Dark Glow Ship.json"/>
+    <property name="Enemy" type="bool" value="true"/>
+    <property name="addEnemy" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="18" name="T8" type="Enemy" gid="1983" x="960" y="384" width="48" height="48" rotation="-90">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Dark Glow Ship/Dark Glow Ship.json"/>
+    <property name="Enemy" type="bool" value="true"/>
+    <property name="addEnemy" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="19" name="T9" type="Enemy" gid="1983" x="960" y="432" width="48" height="48" rotation="-90">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Dark Glow Ship/Dark Glow Ship.json"/>
+    <property name="Enemy" type="bool" value="true"/>
+    <property name="addEnemy" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="20" name="T10" type="Enemy" gid="1983" x="960" y="480" width="48" height="48" rotation="-90">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Dark Glow Ship/Dark Glow Ship.json"/>
+    <property name="Enemy" type="bool" value="true"/>
+    <property name="addEnemy" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="24" name="S10" type="Enemy" gid="2001" x="872" y="472" width="32" height="32">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Asteroid/New Piskel.json"/>
+    <property name="Asteroid" type="bool" value="true"/>
+    <property name="Neutral" type="bool" value="true"/>
+    <property name="addAsteroid" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Lives">
+  <object id="2" name="Life 1" type="Life" gid="1" x="-5.33333" y="40" width="48" height="48">
+   <properties>
+    <property name="Autostart" type="bool" value="true"/>
+    <property name="lives" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="3" name="Life 2" type="Life" gid="1" x="24" y="40" width="48" height="48">
+   <properties>
+    <property name="Autostart" type="bool" value="true"/>
+    <property name="lives" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="4" name="Life 3" type="Life" gid="1" x="53.3333" y="40" width="48" height="48">
+   <properties>
+    <property name="Autostart" type="bool" value="true"/>
+    <property name="lives" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="5" name="Life 4" type="Life" gid="1" x="82.6667" y="40" width="48" height="48">
+   <properties>
+    <property name="Autostart" type="bool" value="true"/>
+    <property name="lives" type="int" value="4"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Ammo">
+  <properties>
+   <property name="Animated" type="bool" value="true"/>
+   <property name="Neutral" type="bool" value="true"/>
+  </properties>
+  <object id="26" name="Bomb" type="Shoot" gid="2005" x="144" y="192" width="48" height="48" rotation="90">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Bullet/Bullet.json"/>
+    <property name="BombShot" type="bool" value="true"/>
+    <property name="Flash" type="color" value="#ff8d0000"/>
+    <property name="shootAmmo" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="27" name="Bullet" type="Shoot" gid="2005" x="144" y="240" width="48" height="48" rotation="90">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Bullet/Bullet.json"/>
+    <property name="shootAmmo" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="28" name="Explosion" type="Shoot" gid="2008" x="144" y="240" width="48" height="48">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Explosion/Explosion.json"/>
+    <property name="Bomb Hit" type="bool" value="true"/>
+    <property name="bombKills" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Player">
+  <properties>
+   <property name="Animated" type="bool" value="true"/>
+  </properties>
+  <object id="11" name="playerShip" type="Player" gid="1987" x="96" y="240" width="48" height="48" rotation="-270">
+   <properties>
+    <property name="Animation" type="file" value="../../RPG Maker MV/Resources/Piskel/Green Space Ship/Green Space Ship.json"/>
+    <property name="Autostart" type="bool" value="true"/>
+    <property name="Player" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
